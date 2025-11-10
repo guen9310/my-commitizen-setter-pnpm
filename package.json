@@ -1,17 +1,41 @@
 {
   "name": "my-commitizen",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Automated Commitizen setup tool for pnpm projects with Korean prompts and custom commit types",
   "main": "index.js",
+  "bin": {
+    "my-commitizen": "./index.js"
+  },
+  "files": [
+    "index.js",
+    ".cz-config.cjs"
+  ],
   "scripts": {
+    "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "commitizen",
     "cli",
-    "pnpm"
+    "pnpm",
+    "git",
+    "commit",
+    "conventional-commits",
+    "korean",
+    "cz-customizable"
   ],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guen9310/my-commitizen-setter-pnpm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guen9310/my-commitizen-setter-pnpm/issues"
+  },
+  "homepage": "https://github.com/guen9310/my-commitizen-setter-pnpm#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "packageManager": "pnpm@10.20.0"
 }

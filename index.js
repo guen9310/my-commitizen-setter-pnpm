@@ -39,15 +39,15 @@ log('\n[1/4] Commitizen 및 관련 패키지를 설치합니다...', colors.cyan
 const installDeps = runCommand('pnpm add -D commitizen cz-customizable');
 if (!installDeps) process.exit(1);
 
-// 3. 커스텀 설정 파일(.cz-config.js) 복사
-log('\n[2/4] 커스텀 설정 파일(.cz-config.js)을 생성합니다...', colors.cyan);
-const configTemplatePath = path.resolve(__dirname, '.cz-config.js'); 
-const targetProjectPath = path.resolve(process.cwd(), '.cz-config.js');
+// 3. 커스텀 설정 파일(.cz-config.cjs) 복사
+log('\n[2/4] 커스텀 설정 파일(.cz-config.cjs)을 생성합니다...', colors.cyan);
+const configTemplatePath = path.resolve(__dirname, '.cz-config.cjs');
+const targetProjectPath = path.resolve(process.cwd(), '.cz-config.cjs');
 try {
   fs.copyFileSync(configTemplatePath, targetProjectPath);
-  log('.cz-config.js 파일이 성공적으로 생성되었습니다.', colors.green);
+  log('.cz-config.cjs 파일이 성공적으로 생성되었습니다.', colors.green);
 } catch (e) {
-  log(`\n❌ .cz-config.js 파일 복사 중 오류 발생: ${e}`, colors.red);
+  log(`\n❌ .cz-config.cjs 파일 복사 중 오류 발생: ${e}`, colors.red);
   process.exit(1);
 }
 
@@ -55,6 +55,8 @@ try {
 log('\n[3/4] package.json에 commitizen이 커스텀 설정을 사용하도록 구성합니다...', colors.cyan);
 const setCommitizenPath = runCommand('pnpm pkg set config.commitizen.path=./node_modules/cz-customizable');
 if (!setCommitizenPath) process.exit(1);
+const setCommitizenConfig = runCommand('pnpm pkg set config.cz-customizable.config=./.cz-config.cjs');
+if (!setCommitizenConfig) process.exit(1);
 
 // 5. 'commit' 스크립트 추가
 log("\n[4/4] package.json에 'commit' 스크립트를 추가합니다...", colors.cyan);
