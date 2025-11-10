@@ -1,6 +1,6 @@
 {
   "name": "my-commitizen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automated Commitizen setup tool for pnpm projects with Korean prompts and custom commit types",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "files": [
     "index.js",
-    ".cz-config.cjs"
+    "cz-config.cjs"
   ],
   "scripts": {
     "commit": "cz",
