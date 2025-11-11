@@ -3,27 +3,24 @@ module.exports = {
   types: [
     { value: 'feat', name: '✨ feat:     새로운 기능 추가' },
     { value: 'fix', name: '🐛 fix:      버그 수정' },
-    { value: 'docs', name: '📚 docs:     문서 수정' },
-    { value: 'style', name: '💎 style:    코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우' },
-    { value: 'refactor', name: '📦 refactor: 코드 리팩토링' },
-    { value: 'test', name: '🚨 test:     테스트 코드 추가, 리팩토링' },
-    { value: 'chore', name: '♻️  chore:    빌드 업무 수정, 패키지 매니저 수정' },
-    { value: 'design', name: '🎨 design:   CSS 등 사용자 UI 디자인 변경' },
-    { value: 'comment', name: '💡 comment:  필요한 주석 추가 및 변경' },
-    { value: 'rename', name: '🚚 rename:   파일 혹은 폴더명을 수정만 한 경우' },
-    { value: 'remove', name: '🗑️  remove:   파일 삭제' },
-    { value: 'deploy', name: '🚀 deploy:   배포 관련' },
+    { value: 'docs', name: '📚 docs:     문서 작성 및 수정' },
+    { value: 'style', name: '💎 style:    코드 포맷팅, UI/CSS 변경' },
+    { value: 'refactor', name: '♻️  refactor: 코드 리팩토링' },
+    { value: 'test', name: '🚨 test:     테스트 코드' },
+    { value: 'chore', name: '🔧 chore:    빌드, 패키지, 설정 파일 수정' },
   ],
 
   // 스코프(Scope) 정의
   scopes: [
-    { name: 'components' },
-    { name: 'hooks' },
-    { name: 'lib' },
-    { name: 'atoms' },
-    { name: 'types' },
-    { name: 'app' },
-    { name: 'config' },
+    { name: 'project' },      // 프로젝트 전체 관련
+    { name: 'components' },    // 컴포넌트 관련
+    { name: 'deps' },          // 의존성 패키지 관련
+    { name: 'config' },        // 설정 파일 관련
+    { name: 'types' },         // 타입 정의 관련
+    { name: 'utils' },         // 유틸리티 함수 관련
+    { name: 'parser' },        // HTML/JSON 파서 관련
+    { name: 'tree' },          // 트리 구조 관련
+    { name: 'ui' },            // UI/스타일 관련
   ],
 
   // 프롬프트에 표시될 메시지

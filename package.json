@@ -1,6 +1,6 @@
 {
   "name": "my-commitizen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Automated Commitizen setup tool for pnpm projects with Korean prompts and custom commit types",
   "type": "commonjs",
   "main": "index.js",
